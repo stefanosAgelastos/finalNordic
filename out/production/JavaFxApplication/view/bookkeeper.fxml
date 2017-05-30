@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" minHeight="570.0" minWidth="890.0" prefHeight="717.0" prefWidth="1219.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.BookkeeperController">
+    <padding>
+        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+    </padding>
+   <children>
+       <Label contentDisplay="CENTER" nodeOrientation="RIGHT_TO_LEFT" text="Welcome to Nordic Motorhomes" textAlignment="CENTER" VBox.vgrow="NEVER">
+           <font>
+             <Font name="Arial Bold" size="35.0" />
+           </font>
+           <effect>
+             <InnerShadow />
+           </effect>
+           <padding>
+             <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+           </padding>
+       </Label>
+       <Pane nodeOrientation="LEFT_TO_RIGHT" opacity="0.45" VBox.vgrow="NEVER" />
+       <TabPane prefHeight="395.0" prefWidth="743.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+         <tabs>
+             <Tab text="Motorhomes">
+                 <content>
+                     <VBox prefHeight="200.0" prefWidth="100.0">
+                         <children>
+                             <HBox prefHeight="257.0" prefWidth="388.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                     <VBox prefHeight="583.0" prefWidth="664.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                         <children>
+                                             <TableView fx:id="motorhomesTable" prefHeight="504.0" prefWidth="696.0" VBox.vgrow="ALWAYS">
+                                                 <columns>
+                                                     <TableColumn fx:id="motorhomeId" prefWidth="50.0" text="ID" />
+                                                     <TableColumn fx:id="motorhomeBrand" prefWidth="165.0" text="Brand" />
+                                                     <TableColumn fx:id="nbrPersons" prefWidth="142.0" text="Nbr of persons" />
+                                                     <TableColumn fx:id="motorhomePrice" prefWidth="253.0" text="Price per day" />
+                                                 </columns>
+                                                 <padding>
+                                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                 </padding>
+                                                 <VBox.margin>
+                                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                 </VBox.margin>
+                                             </TableView>
+                                             <Button fx:id="motorhomeRemoveButton" disable="true" mnemonicParsing="false" onAction="#delete" prefHeight="43.0" prefWidth="465.0" text="Remove">
+                                                 <padding>
+                                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                 </padding>
+                                                 <VBox.margin>
+                                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                 </VBox.margin>
+                                             </Button>
+                                         </children>
+                                         <padding>
+                                             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                         </padding>
+                                     </VBox>
+                                     <VBox prefHeight="583.0" prefWidth="296.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                         <children>
+                                             <TextField fx:id="newBrand" promptText="Motorhome Brand">
+                                                 <padding>
+                                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                 </padding>
+                                                 <VBox.margin>
+                                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                 </VBox.margin>
+                                             </TextField>
+                                             <TextField fx:id="newPrice" promptText="Price per day">
+                                                 <padding>
+                                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                 </padding>
+                                                 <VBox.margin>
+                                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                 </VBox.margin>
+                                             </TextField>
+                                             <TextField fx:id="newNbrPersons" promptText="Number of persons">
+                                                 <padding>
+                                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                 </padding>
+                                                 <VBox.margin>
+                                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                 </VBox.margin>
+                                             </TextField>
+                                             <Label />
+                                             <Button fx:id="motorhomeAddButton" mnemonicParsing="false" onAction="#add" prefHeight="43.0" prefWidth="547.0" text="Add new Motorhome">
+                                                 <padding>
+                                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                 </padding>
+                                                 <VBox.margin>
+                                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                 </VBox.margin>
+                                             </Button>
+                                         </children>
+                                         <padding>
+                                             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                         </padding>
+                                     </VBox>
+                                 </children>
+                             </HBox>
+                         </children>
+                     </VBox>
+                 </content>
+             </Tab>
+            <Tab text="Customers">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="257.0" prefWidth="388.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox prefHeight="583.0" prefWidth="664.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TableView fx:id="customersTable" prefHeight="504.0" prefWidth="696.0" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="customerId" prefWidth="50.0" text="ID" />
+                                          <TableColumn fx:id="customerTitle" prefWidth="66.0" text="Title" />
+                                          <TableColumn fx:id="customerName" prefWidth="258.0" text="Name" />
+                                          <TableColumn fx:id="customerEmail" prefWidth="266.0" text="Email" />
+                                          <TableColumn fx:id="customerTel" prefWidth="252.0" text="Telephone" />
+                                          <TableColumn fx:id="costumerDoB" minWidth="-Infinity" prefWidth="291.0" text="Date of Birth" />
+                                       </columns>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab text="Bookings">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="257.0" prefWidth="388.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox prefHeight="583.0" prefWidth="664.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TableView fx:id="BookingsTable" prefHeight="504.0" prefWidth="696.0" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="bookingId" prefWidth="50.0" text="ID" />
+                                          <TableColumn fx:id="bookingStartDate" prefWidth="124.0" text="startDate" />
+                                          <TableColumn fx:id="bookingEndDate" prefWidth="114.0" text="endDate" />
+                                          <TableColumn fx:id="bookingDistance1" prefWidth="99.0" text="distance1" />
+                                          <TableColumn fx:id="bookingDistance2" prefWidth="103.0" text="distance2" />
+                                          <TableColumn fx:id="bookingExtra1" minWidth="-Infinity" prefWidth="93.0" text="Extra1" />
+                                          <TableColumn fx:id="bookingExtra2" prefWidth="88.0" text="Extra2" />
+                                          <TableColumn fx:id="bookingExtra3" prefWidth="106.0" text="Extra3" />
+                                          <TableColumn fx:id="bookingExtra4" prefWidth="89.0" text="Extra4" />
+                                          <TableColumn fx:id="bookingStatus" prefWidth="210.0" text="Status" />
+                                       </columns>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+       </TabPane>
+   </children>
+</VBox>

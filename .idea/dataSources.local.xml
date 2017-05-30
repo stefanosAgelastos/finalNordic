@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@localhost" uuid="0ba2cbc2-34b9-41e1-8486-244361b97f78">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:nordicmotorhomes</introspection-schemas>
+    </data-source>
+    <data-source name="nordicmotorhomes@volatilemercurycopenhagen.crkv1yx1tdak.us-east-1.rds.amazonaws.com" uuid="11cd444a-a7f6-4ae0-a540-fd92bcb53967">
+      <database-info product="MySQL" version="5.6.27-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>agelastostefanos</user-name>
+      <introspection-schemas>*:nordicmotorhomes</introspection-schemas>
+    </data-source>
+  </component>
+</project>

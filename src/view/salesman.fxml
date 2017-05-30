@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SalesmanController">
+   <children>
+      <TabPane prefHeight="595.0" prefWidth="857.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="bookingsTab" text="Bookings">
+               <content>
+                  <AnchorPane prefHeight="769.0" prefWidth="857.0">
+                     <children>
+                        <DatePicker fx:id="PickUpDate" layoutX="236.0" layoutY="13.0" prefHeight="27.0" prefWidth="167.0" />
+                        <DatePicker fx:id="DropOffDate" layoutX="236.0" layoutY="59.0" prefHeight="27.0" prefWidth="167.0" />
+                        <Label layoutX="50.0" layoutY="19.0" text="Pick-Up Date: " />
+                        <Label layoutX="34.0" layoutY="155.0" text="Drop-off Distance:" />
+                        <Label layoutX="28.0" layoutY="206.0" text="Number of Persons:" />
+                        <ChoiceBox fx:id="numberOfPersons" layoutX="236.0" layoutY="200.0" prefHeight="27.0" prefWidth="167.0" />
+                        <Label layoutX="38.0" layoutY="110.0" text="Pick-up Distance:" />
+                        <Label layoutX="48.0" layoutY="65.0" text="Drop-off Time:" />
+                        <TextField fx:id="newPickUp" layoutX="236.0" layoutY="104.0" prefHeight="27.0" prefWidth="167.0" promptText="km" />
+                        <TextField fx:id="newDropOff" layoutX="237.0" layoutY="149.0" prefHeight="27.0" prefWidth="166.0" promptText="km" />
+                        <TableView fx:id="availablemotorhomes" layoutX="48.0" layoutY="368.0" prefHeight="253.0" prefWidth="366.0">
+                          <columns>
+                            <TableColumn fx:id="motorhomeId" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="motorhomeBrand" prefWidth="75.0" text="Brand" />
+                              <TableColumn fx:id="motorhomeCapacity" prefWidth="101.0" text="Capacity" />
+                              <TableColumn fx:id="motorhomePrice" prefWidth="114.0" text="Price/day" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="48.0" layoutY="336.0" prefHeight="23.0" prefWidth="210.0" text="Available Cars">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="book" layoutX="658.0" layoutY="504.0" mnemonicParsing="false" onAction="#bookOnAction" prefHeight="27.0" prefWidth="101.0" text="Book" />
+                        <TextField fx:id="customerName1" layoutX="613.0" layoutY="91.0" prefHeight="39.0" prefWidth="204.0" />
+                        <TextField fx:id="customerEmail1" layoutX="612.0" layoutY="136.0" prefHeight="39.0" prefWidth="207.0" />
+                        <Label layoutX="529.0" layoutY="46.0" text="Title:" />
+                        <Label layoutX="530.0" layoutY="142.0" text="Email:" />
+                        <Label layoutX="527.0" layoutY="97.0" text="Name:" />
+                        <ChoiceBox fx:id="title" layoutX="613.0" layoutY="40.0" prefHeight="39.0" prefWidth="202.0" />
+                        <TextField fx:id="customerTelephone1" layoutX="612.0" layoutY="187.0" prefHeight="39.0" prefWidth="206.0" />
+                        <Label layoutX="509.0" layoutY="187.0" text="Telephone:" />
+                        <Label layoutX="459.0" layoutY="13.0" prefHeight="23.0" prefWidth="270.0" text="Customer Details">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="459.0" layoutY="282.0" prefHeight="18.0" prefWidth="292.0" text="Billing Infomation">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cardName" layoutX="582.0" layoutY="344.0" />
+                        <TextField fx:id="cardNumber" layoutX="582.0" layoutY="380.0" promptText="#### #### #### ####" />
+                        <TextField fx:id="cardExpiry" layoutX="582.0" layoutY="425.0" prefHeight="27.0" prefWidth="62.0" promptText="MM/DD" />
+                        <Label layoutX="474.0" layoutY="316.0" text="Card Type:" />
+                        <Label layoutX="462.0" layoutY="386.0" text="Card Number:" />
+                        <Label layoutX="483.0" layoutY="431.0" text="Expiry Date:" />
+                        <Label layoutX="516.0" layoutY="471.0" text="CVC:" />
+                        <Label layoutX="456.0" layoutY="355.0" text="Name on Card:" />
+                        <ChoiceBox fx:id="cardType" layoutX="586.0" layoutY="310.0" prefHeight="27.0" prefWidth="167.0" />
+                        <TextField fx:id="cardCVC" layoutX="582.0" layoutY="465.0" prefHeight="27.0" prefWidth="62.0" promptText="###" />
+                        <CheckBox fx:id="childseat" layoutX="119.0" layoutY="307.0" mnemonicParsing="false" text="Child Seat" />
+                        <CheckBox fx:id="bikerack" layoutY="307.0" mnemonicParsing="false" text="Bike Rack" />
+                        <CheckBox fx:id="picnic" layoutX="237.0" layoutY="307.0" mnemonicParsing="false" text="Picnic Table" />
+                        <CheckBox fx:id="chairs" layoutX="373.0" layoutY="307.0" mnemonicParsing="false" text="Chairs" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Text layoutX="501.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth" />
+                        <DatePicker fx:id="customerdob1" layoutX="613.0" layoutY="237.0" prefHeight="39.0" prefWidth="205.0" />
+                        <Label fx:id="priceLabel" layoutX="681.0" layoutY="439.0" text="0.0,-" textFill="#18d73b">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Existing">
+               <content>
+                  <TableView fx:id="existingBookings" onMouseClicked="#selectBooking">
+                     <columns>
+                        <TableColumn fx:id="bookingID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="92.0" text="Name" />
+                        <TableColumn fx:id="emailColumn" prefWidth="123.0" text="Email" />
+                        <TableColumn fx:id="motorhomeColumn" prefWidth="101.0" text="Motorhome" />
+                        <TableColumn fx:id="pickUp" prefWidth="107.0" text="Pick-up Date" />
+                        <TableColumn fx:id="dropOff" prefWidth="125.0" text="Drop-off Date " />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab text="Customers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="562.0" prefWidth="857.0">
+                          <columns>
+                              <TableColumn fx:id="customerId" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="customerTitle" prefWidth="75.0" text="Title" />
+                            <TableColumn fx:id="customerName" prefWidth="77.0" text="Firstname" />
+                              <TableColumn fx:id="customerDoB" prefWidth="75.0" text="DOB" />
+                              <TableColumn fx:id="customerEmail" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="customerTelephone" prefWidth="87.0" text="Telephone " />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
